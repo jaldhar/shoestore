@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">The Shoe Store</string>
     <string name="login_name">Shoe Store: Login</string>
     <string name="email_address_label">Email Address</string>
     <string name="password_label">Password</string>
@@ -7,4 +7,13 @@
     <string name="no_account">Don\'t have an account yet?</string>
     <string name="signup">Sign Up</string>
     <string name="welcome_name">Shoe Store: Welcome</string>
+    <string name="welcome_text">Welcome to the Shoe Store. We are your number one source for shoes,
+        boots, cleats, loafers, pumps, slippers, sneakers, clogs, moccasins, sandals, high heels,
+        penny loafers, wing-tips and all other kinds of foot gear.  No socks.\n\nIn the next screen,
+        you will learn how to add a new shoe to our inventory.  Click the button
+        below to get started.
+</string>
+    <string name="instructions">Adding Shoes</string>
+    <string name="instructions_name">Shoe Store: Instructions</string>
+
 </resources>
