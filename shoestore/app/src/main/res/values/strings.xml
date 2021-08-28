@@ -10,10 +10,18 @@
     <string name="welcome_text">Welcome to the Shoe Store. We are your number one source for shoes,
         boots, cleats, loafers, pumps, slippers, sneakers, clogs, moccasins, sandals, high heels,
         penny loafers, wing-tips and all other kinds of foot gear.  No socks.\n\nIn the next screen,
-        you will learn how to add a new shoe to our inventory.  Click the button
-        below to get started.
-</string>
-    <string name="instructions">Adding Shoes</string>
+        you will learn how to add a new shoe to our inventory.  Click the button below to get started.
+    </string>
+    <string name="instructions">Instructions</string>
     <string name="instructions_name">Shoe Store: Instructions</string>
+    <string name="add_a_shoe">Add A Shoe</string>
+    <string name="instructions_text">Clicking on the button below will take you to a list of shoes in
+        our inventory.  Initially, it will be empty.  You can add a shoe to the list by clicking on the
+        action button with a plus sign in the listing screen.  This will take you to a form where you
+        can enter the name of the shoe, the company that manufactures it, the size, and a description.\n\n
+        Uploading images is not supported at this time.
+    </string>
+    <!-- listing screen -->
+    <string name="shoe_list">The Shoe List</string>
 
 </resources>
