@@ -5,7 +5,7 @@
     <string name="password_label">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="no_account">Don\'t have an account yet?</string>
-    <string name="signup">Sign Up</string>
+    <string name="signup">Sign Up</string>>
     <string name="welcome_name">Shoe Store: Welcome</string>
     <string name="welcome_text">Welcome to the Shoe Store. We are your number one source for shoes,
         boots, cleats, loafers, pumps, slippers, sneakers, clogs, moccasins, sandals, high heels,
@@ -23,5 +23,18 @@
     </string>
     <!-- listing screen -->
     <string name="shoe_list">The Shoe List</string>
-
+    <string name="listing_name">Shoe Store: List of Shoes</string>
+    <string name="sign_out">Sign Out</string>
+    <!-- details screen -->
+    <string name="details_name">Shoe Store: Add A Shoe</string>
+    <string name="name_label">Name</string>
+    <string name="size_label">Size</string>
+    <string name="company_label">Company</string>
+    <string name="images_label">Images</string>
+    <string name="description_label">Description</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="no_shoes">No shoes at the moment.</string>
+    <string name="by">\ by\ </string>
+    <string name="size">size: </string>
 </resources>
