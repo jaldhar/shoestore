@@ -8,10 +8,8 @@
     </data>
     <!--
         As per Googles' design guides, CardView seemed to be the most appropriate widget to display
-        a shoe.  While I could have used Constraint Layout here, I felt that the layout is simple
-        and fixed enough that a Linear layout would be ok.  There are three lines; the top two lines
-        are also linear layouts.  Also the text views in the top line have the Headline6 style and
-        the AllCaps property to make the line stand out.
+        a shoe.  Also the text views in the top line have the Headline6 style and the AllCaps property
+        to make the line stand out.
     -->
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
@@ -20,55 +18,82 @@
     app:cardCornerRadius="@dimen/cardview_default_radius"
     app:cardBackgroundColor="@color/cardview_light_background"
     app:cardElevation="@dimen/cardview_default_elevation">
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/half_margin"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="@{shoe.name}"
-                android:textAllCaps="true"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="@string/by"
-                android:textAllCaps="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="@{shoe.company}"
-                android:textAllCaps="true"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Body1"
-                android:text="@string/size" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Body1"
-                android:text="@={``+ shoe.size}" />
-        </LinearLayout>
+        android:orientation="vertical"
+        android:padding="@dimen/half_margin">
+
         <TextView
+            android:id="@+id/card_name"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{shoe.name}"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@+id/card_by_label"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_by_label"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/by"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@+id/card_company"
+            app:layout_constraintStart_toEndOf="@id/card_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_company"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{shoe.company}"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_by_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_size_label"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size"
+            app:layout_constraintEnd_toStartOf="@+id/card_size"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_name" />
+
+        <TextView
+            android:id="@+id/card_size"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={``+ shoe.size}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_size_label"
+            app:layout_constraintTop_toBottomOf="@id/card_name" />
+
+        <TextView
+            android:id="@+id/card_description"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/full_margin"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            android:text="@={shoe.description}" />
-    </LinearLayout>
+            android:text="@={shoe.description}"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_size_label" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 </layout>
